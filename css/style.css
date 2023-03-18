@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.p{
+    color: var(--Soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+}
+.btn{
+    color: var(--White);
+    text-decoration: none;
+}
+.btn:hover{
+    color: var(--Cyan);
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+main{
+    margin-bottom: 4rem;
+    box-shadow: #0c172a 0px 0px 4px 1rem, #0c192c 0px 0px 4px 2rem;
+}
+
+main .card{
+    width: 21rem;
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.card .images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card .images .main-img{
+    width: 100%;
+    border-radius: 5px;
+}
+.card .images .view-img{
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, .4);
+    opacity: 0;
+    width: 288px;
+    height: 288px;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    transition: all .6s;
+    cursor: pointer;
+}
+.card .images .view-img:hover{
+    opacity: 1;
+}
+
+main .card .info{
+    padding: 1rem 0 0;
+    border-bottom: 2px var(--Very-dark-blue-line) solid;
+}
+
+.card .info .title{
+    font-size: 1.3rem;
+    FONT-WEIGHT: 400;
+}
+
+.card .info .discription{
+    margin: 1rem 0;
+}
+
+.card .info .price-time{
+    font-weight: 400;
+    margin: 1rem 0;
+    color: var(--Cyan);
+}
+
+.card .info .price-time > img{
+    position: relative;
+    bottom: -3px;
+}
+.card .info .price-time .time-left{
+    position: relative;
+    left: 33%;
+}
+.card .info .price-time .time-left > img{
+    position: relative;
+    bottom: -3px;
+}
+
+.card .creator{
+    margin-bottom: 0.6rem;
+}
+
+.card .creator > img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px var(--White) solid;
+    position: relative;
+    top: 10px;
+    margin-right: 0.5rem;
+}
+
+.card .creator .name{
+    font-size: 16px;
+}
+
+footer .attribution { font-size: 13px; text-align: center; color: var(--White); }
+footer .attribution a { color: var(--Soft-blue); }
